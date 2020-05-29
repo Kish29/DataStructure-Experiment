@@ -1,0 +1,4 @@
+"C:\Program Files\JetBrains\CLion 2019.3.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_SH=CMAKE_SH-NOTFOUND -G "CodeBlocks - MinGW Makefiles" C:\Users\asus\Desktop\CurseOnline\DataStructure\Experiments\Project_2
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_2/cmake-build-debug

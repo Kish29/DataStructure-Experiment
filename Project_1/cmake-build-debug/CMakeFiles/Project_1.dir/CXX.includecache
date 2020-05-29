@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/vector.h
+worker.h
+../include/worker.h
+
+../include/worker.h
+string
+-
+
+../include/workflow.h
+memory
+-
+worker.h
+../include/worker.h
+vector.h
+../include/vector.h
+
+C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_1/main.cpp
+iostream
+-
+string
+-
+csignal
+-
+workflow.h
+C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_1/workflow.h
+
+C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_1/src/workflow.cpp
+workflow.h
+C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_1/src/workflow.h
+worker.h
+C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_1/src/worker.h
+vector.h
+C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_1/src/vector.h
+iostream
+-
+
