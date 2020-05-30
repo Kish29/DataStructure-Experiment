@@ -7,6 +7,7 @@
 Job::~Job() {
     if (worker)
         delete worker;
+    //注意，千万不要对prev和next进行操作，不然会段错误
     // if (prev)
     //     delete prev;
     // if (next)
