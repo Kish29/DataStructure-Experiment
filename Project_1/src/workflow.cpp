@@ -1,15 +1,18 @@
 #include "workflow.h"
 #include "worker.h"
 #include "vector.h"
+#include "cmath"
 #include <iostream>
 
 Job::~Job() {
-    //TODO
-    delete worker;
-    delete prev;
-    delete next;
-    worker = nullptr;
-    prev = next = nullptr;   // set null
+    if (worker)
+        delete worker;
+    // if (prev)
+    //     delete prev;
+    // if (next)
+    //     delete next;
+    //worker = nullptr;
+    //prev = next = nullptr;   // set null
 }
 
 Workflow::Workflow() {
@@ -19,15 +22,12 @@ Workflow::Workflow() {
 }
 
 Workflow::~Workflow() {
-    //TODO
     Job *temp = head;
-    Job *temp2;
-    while (temp != nullptr) {
-        temp2 = temp->next;
-        free(temp);
-        temp = temp2;
+    while (temp) {
+        head = head->next;
+        delete(temp);
+        temp = head;
     }
-    head = tail = temp = temp2 = nullptr;
 }
 
 int Workflow::insert(Job *j) {
@@ -36,38 +36,73 @@ int Workflow::insert(Job *j) {
         return 1;
     if (head == nullptr) {  // if head is null
         // 注意, 这里只能用calloc分配内存,不然job的id会+1
-        head = (Job *) calloc(sizeof(Job), 1);
-        tail = (Job *) calloc(sizeof(Job), 1);
-        head = j;
-        head->next = nullptr;
-        tail->prev = head;
-        tail->next = head->prev = nullptr;
+        //head = (Job *) calloc(sizeof(Job), 1);
+        //tail = (Job *) calloc(sizeof(Job), 1);
+        head = tail = j;
+        tail->prev = tail->next = head->prev = nullptr;
         size++;
         return 0;
     }
-    tail->prev->next = j;
+    tail->next = j;
     j->next = nullptr;
-    j->prev = tail->prev;
-    tail->prev = j;
+    j->prev = tail;
+    tail = j;
     size++;
     return 0;
 }
 
 int Workflow::swap(int original_index, int target_index) {
-    //TODO
     if (original_index < 0 || original_index >= size || target_index < 0 || target_index >= size)
         return 1;
-    Job *origin = get(original_index);
-    Job *target = get(target_index);
-    Job *temp1 = origin->prev;
-    Job *temp2 = origin->next;
-    origin->next = target->next;
-    origin->prev = target->prev;
-    target->prev->next = target->next->prev = origin;
-    temp1->next = temp2->prev = target;
-    target->prev = temp1;
-    target->next = temp2;
-    return 0;
+    if (original_index == target_index)
+        return 0;
+    int orgi = std::min(original_index, target_index);
+    int trgi = std::max(original_index, target_index);
+    Job *origin = get(orgi);
+    Job *target = get(trgi);
+    if (origin && target) {
+        Job *origin_prev = origin->prev;
+        Job *target_next = target->next;
+        if (origin_prev && target_next) {
+            //if origin neighbor target
+            if (trgi - orgi == 1) {
+                origin->next = target_next;
+                target->prev = origin_prev;
+                target_next->prev = origin;
+                target->next = origin;
+                origin_prev->next = target;
+                origin->prev = target;
+                return 0;
+            }
+            Job *origin_next = origin->next;
+            origin->next = target->next;
+            origin->prev = target->prev;
+            target->prev->next = target_next->prev = origin;
+            origin_prev->next = origin_next->prev = target;
+            target->prev = origin_prev;
+            target->next = origin_next;
+        } else if (origin_prev) {
+            Job *origin_next = origin->next;
+            origin->next = nullptr;
+            origin->prev = target->prev;
+            target->prev->next = origin;
+            origin_prev->next = origin_next->prev = target;
+            target->prev = origin_prev;
+            target->next = origin_next;
+            tail = origin;
+        } else {
+            Job *origin_next = origin->next;
+            origin->next = target_next;
+            origin->prev = target->prev;
+            target->prev->next = target->next->prev = origin;
+            origin_next->prev = target;
+            target->next = origin_next;
+            target->prev = nullptr;
+            head = target;
+        }
+        return 0;
+    }
+    return 1;
 }
 
 Job *Workflow::pop() {
@@ -75,8 +110,10 @@ Job *Workflow::pop() {
     if (head == nullptr)
         return nullptr;
     Job *temp = head;
+    head->next->prev = nullptr;
     head = head->next;
     size--;
+    temp->next = nullptr;
     return temp;
 }
 
@@ -94,7 +131,6 @@ int Workflow::process(vector *l, int index) {
             cur->worker = newWorker;
         } else
             cur->worker = newWorker;
-        swap(0, index);
         return 0;
     }
     return 1;
@@ -138,6 +174,24 @@ Job *Workflow::get(int index) const {
 }
 
 int Job::print() {
+    if (this == nullptr)
+        return 1;
     std::cout << "job [" << this->id << "]\n";
     return 0;
 }
+
+// int Job::getId() const {
+//     return id;
+// }
+
+// Job *Workflow::getJobById(int id) const {
+//     if (id < 0 || id >= size)
+//         return nullptr;
+//     Job *temp = head;
+//     for (int i = 0; i < size; ++i) {
+//         if (temp->getId() == id)
+//             return temp;
+//         temp = temp->next;
+//     }
+//     return temp;
+// }

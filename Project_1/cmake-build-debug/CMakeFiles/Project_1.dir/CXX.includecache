@@ -26,19 +26,9 @@ C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_1/main.cpp
 iostream
 -
 string
--
-csignal
--
+C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_1/string
+vector.h
+C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_1/vector.h
 workflow.h
 C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_1/workflow.h
-
-C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_1/src/workflow.cpp
-workflow.h
-C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_1/src/workflow.h
-worker.h
-C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_1/src/worker.h
-vector.h
-C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_1/src/vector.h
-iostream
--
 

@@ -25,6 +25,8 @@ int vector::insert(Worker *new_worker) {
         this->data[length - 1] = new_worker;
         return 1;
     }
+    if (!new_worker)
+        return 0;
     // pay attention to length - 1
     length++;   // length should increase preferentially
     this->data[length - 1] = (Worker *) calloc(sizeof(Worker), 1);

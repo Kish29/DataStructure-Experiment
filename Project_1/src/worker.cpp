@@ -5,8 +5,8 @@
 /*TODO 实现一个构造函数。
  Worker 的名字已经被分配在堆(Heap)上*/
 Worker::Worker(std::string &input_name) {
-    this->id = num_worker;
     this->name = input_name;
+    this->id = num_worker;
     num_worker++;
 }
 

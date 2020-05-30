@@ -21,6 +21,8 @@ public:
 
     ~Job();                                           //TODO
     int print();
+
+    int getId() const;
 };
 
 class Workflow {
@@ -38,6 +40,8 @@ public:
     int print();
 
     Job *get(int index) const;
+
+    // Job *getJobById(int id) const;
 };
 
 #endif

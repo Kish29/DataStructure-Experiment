@@ -1,51 +1,31 @@
 #include <iostream>
-#include <string>
-#include <csignal>
+#include "string"
+#include "vector.h"
 #include "workflow.h"
-using namespace std;
-
-int test1(int i);
-
-int test2(int i);
-
-void signalHandler( int signum ) {
-    cout << "\nSegmentation Fault.\n";
-    exit(signum);
-}
 
 int main() {
-    signal(SIGABRT, signalHandler);
-    test1(1);
-    test2(2);
-    return 0;
-}
-
-int test1(int i) {
-    cout << "任务2 单元测试" << i << "\n";
-    Workflow *flow = new Workflow();
-    for (int i = 0; i < 20; i++) {
-        flow->insert(new Job());
+    Workflow *w = new Workflow();
+    std::cout << w->insert(nullptr);
+    w->print();
+    for (int i = 0; i < 10; ++i) {
+        w->insert(new Job());
     }
-    flow->swap(4, 10);
-    flow->print();
-
-    delete flow;
-    return 0;
-}
-
-int test2(int i) {
-    cout << "任务2 单元测试" << i << "\n";
-    Workflow *flow = new Workflow();
+    Job *j = new Job();
+    j->worker = new Worker();
+    w->insert(j);
+    w->print();
+    w->get(10)->print();
     vector *v = new vector(10);
-    for (int i = 0; i < 12; i++) {
+    for (int k = 0; k < 10; ++k) {
         v->insert(new Worker());
     }
-    for (int i = 0; i < 20; i++) {
-        flow->insert(new Job());
-    }
-    flow->print();
-    flow->pop();
-    delete flow;
-    delete v;
-    return 0;
+    std::cout << w->process(v, 8) << std::endl;
+    std::cout << w->process(v, 8) << std::endl;
+    v->print();
+    w->swap(3, 2);
+    w->print();
+    w->swap(3, 2);
+    w->print();
+    w->pop();
+    w->print();
 }
