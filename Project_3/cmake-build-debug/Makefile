@@ -122,33 +122,6 @@ Project_3/fast:
 	$(MAKE) -f CMakeFiles\Project_3.dir\build.make CMakeFiles/Project_3.dir/build
 .PHONY : Project_3/fast
 
-src/functiontest.obj: src/functiontest.cpp.obj
-
-.PHONY : src/functiontest.obj
-
-# target to build an object file
-src/functiontest.cpp.obj:
-	$(MAKE) -f CMakeFiles\Project_3.dir\build.make CMakeFiles/Project_3.dir/src/functiontest.cpp.obj
-.PHONY : src/functiontest.cpp.obj
-
-src/functiontest.i: src/functiontest.cpp.i
-
-.PHONY : src/functiontest.i
-
-# target to preprocess a source file
-src/functiontest.cpp.i:
-	$(MAKE) -f CMakeFiles\Project_3.dir\build.make CMakeFiles/Project_3.dir/src/functiontest.cpp.i
-.PHONY : src/functiontest.cpp.i
-
-src/functiontest.s: src/functiontest.cpp.s
-
-.PHONY : src/functiontest.s
-
-# target to generate assembly for a file
-src/functiontest.cpp.s:
-	$(MAKE) -f CMakeFiles\Project_3.dir\build.make CMakeFiles/Project_3.dir/src/functiontest.cpp.s
-.PHONY : src/functiontest.cpp.s
-
 src/hashtable.obj: src/hashtable.cpp.obj
 
 .PHONY : src/hashtable.obj
@@ -176,6 +149,33 @@ src/hashtable.cpp.s:
 	$(MAKE) -f CMakeFiles\Project_3.dir\build.make CMakeFiles/Project_3.dir/src/hashtable.cpp.s
 .PHONY : src/hashtable.cpp.s
 
+src/part1.obj: src/part1.cpp.obj
+
+.PHONY : src/part1.obj
+
+# target to build an object file
+src/part1.cpp.obj:
+	$(MAKE) -f CMakeFiles\Project_3.dir\build.make CMakeFiles/Project_3.dir/src/part1.cpp.obj
+.PHONY : src/part1.cpp.obj
+
+src/part1.i: src/part1.cpp.i
+
+.PHONY : src/part1.i
+
+# target to preprocess a source file
+src/part1.cpp.i:
+	$(MAKE) -f CMakeFiles\Project_3.dir\build.make CMakeFiles/Project_3.dir/src/part1.cpp.i
+.PHONY : src/part1.cpp.i
+
+src/part1.s: src/part1.cpp.s
+
+.PHONY : src/part1.s
+
+# target to generate assembly for a file
+src/part1.cpp.s:
+	$(MAKE) -f CMakeFiles\Project_3.dir\build.make CMakeFiles/Project_3.dir/src/part1.cpp.s
+.PHONY : src/part1.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -185,12 +185,12 @@ help:
 	@echo ... edit_cache
 	@echo ... Project_3
 	@echo ... rebuild_cache
-	@echo ... src/functiontest.obj
-	@echo ... src/functiontest.i
-	@echo ... src/functiontest.s
 	@echo ... src/hashtable.obj
 	@echo ... src/hashtable.i
 	@echo ... src/hashtable.s
+	@echo ... src/part1.obj
+	@echo ... src/part1.i
+	@echo ... src/part1.s
 .PHONY : help
 
 

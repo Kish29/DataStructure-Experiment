@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Project_3.dir/src/functiontest.cpp.obj"
   "CMakeFiles/Project_3.dir/src/hashtable.cpp.obj"
+  "CMakeFiles/Project_3.dir/src/part1.cpp.obj"
   "Project_3.exe"
   "Project_3.exe.manifest"
   "Project_3.pdb"

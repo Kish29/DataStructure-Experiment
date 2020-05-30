@@ -67,30 +67,59 @@ Node::~Node() {
 }
 
 HashTable::HashTable() {
-    //TODO
+    // set hash table to 200000
+    elem = new Node[MAX_SIZE + 2];
+    size = 0;
 }
 
 HashTable::~HashTable() {
-    //TODO
+    delete elem;
 }
 
 int HashTable::hash(Node &index) {
-    //TODO
-    return 0;
+    // according to java's hash algorithm
+    int hash = 0;
+    for (char c : index.getString()) {
+        hash = 31 * hash + c;
+    }
+    return abs(hash) % MAX_SIZE;
 }
 
 bool HashTable::search(Node &index, int &pos, int &times) {
-    //TODO
-    return false;
+    int hash = this->hash(index);
+    // collision times
+    times = 0;
+    int i = times % MAX_SIZE;
+    // record index
+    pos = hash + i;
+    while (elem[hash + i] != index) {
+        if (elem[hash + i] == "#")
+            return false;
+        times++;
+        i = times % MAX_SIZE;
+        pos += i;
+    }
+    return true;
 }
 
 int HashTable::insert(Node &index) {
-    //TODO
+    int pos, times;
+    if (search(index, pos, times)) {
+        elem[pos].second()++;
+        return 2;
+    } else
+        elem[pos] = index;
     return 1;
 }
 
 int HashTable::insert(const char *str) {
-    //TODO
+    int pos, times;
+    Node n(str);
+    if (search(n, pos, times)) {
+        elem[pos].second()++;
+        return 2;
+    } else
+        elem[pos] = n;
     return 1;
 }
 
@@ -116,6 +145,10 @@ Node::Node(const string &str) {
     p = make_pair(str, 1);
 }
 
+const string &Node::getString() const {
+    return p.first;
+}
+
 int HashTable::get_size() const {
     return size;
 }
@@ -132,4 +165,8 @@ const pair<string, int> *HashTable::get_pair(int index) const {
         return (elem[index].get_pair());
     }
     return NULL;
+}
+
+const int &HashTable::worddTimes(string &str) const {
+    return <#initializer#>;
 }

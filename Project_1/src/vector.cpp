@@ -21,7 +21,7 @@ int vector::insert(Worker *new_worker) {
         this->expand();
         // pay attention to length - 1
         length++;
-        this->data[length - 1] = (Worker *) calloc(sizeof(Worker), 1);
+        //this->data[length - 1] = (Worker *) calloc(sizeof(Worker), 1);
         this->data[length - 1] = new_worker;
         return 1;
     }
@@ -29,7 +29,7 @@ int vector::insert(Worker *new_worker) {
         return 0;
     // pay attention to length - 1
     length++;   // length should increase preferentially
-    this->data[length - 1] = (Worker *) calloc(sizeof(Worker), 1);
+    //this->data[length - 1] = (Worker *) calloc(sizeof(Worker), 1);
     this->data[length - 1] = new_worker;
     return 0;
 }
