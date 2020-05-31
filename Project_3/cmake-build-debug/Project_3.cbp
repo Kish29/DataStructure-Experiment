@@ -88,9 +88,6 @@
 		<Unit filename="C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_3/src/hashtable.cpp">
 			<Option target="Project_3"/>
 		</Unit>
-		<Unit filename="C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_3/src/word_check.cpp">
-			<Option target="Project_3"/>
-		</Unit>
 		<Unit filename="C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_3/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

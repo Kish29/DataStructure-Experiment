@@ -56,24 +56,10 @@ include CMakeFiles/Project_3.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Project_3.dir/flags.make
 
-CMakeFiles/Project_3.dir/src/hashtable.cpp.obj: CMakeFiles/Project_3.dir/flags.make
-CMakeFiles/Project_3.dir/src/hashtable.cpp.obj: CMakeFiles/Project_3.dir/includes_CXX.rsp
-CMakeFiles/Project_3.dir/src/hashtable.cpp.obj: ../src/hashtable.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\asus\Desktop\CurseOnline\DataStructure\Experiments\Project_3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Project_3.dir/src/hashtable.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project_3.dir\src\hashtable.cpp.obj -c C:\Users\asus\Desktop\CurseOnline\DataStructure\Experiments\Project_3\src\hashtable.cpp
-
-CMakeFiles/Project_3.dir/src/hashtable.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_3.dir/src/hashtable.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\asus\Desktop\CurseOnline\DataStructure\Experiments\Project_3\src\hashtable.cpp > CMakeFiles\Project_3.dir\src\hashtable.cpp.i
-
-CMakeFiles/Project_3.dir/src/hashtable.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_3.dir/src/hashtable.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\asus\Desktop\CurseOnline\DataStructure\Experiments\Project_3\src\hashtable.cpp -o CMakeFiles\Project_3.dir\src\hashtable.cpp.s
-
 CMakeFiles/Project_3.dir/src/dict.cpp.obj: CMakeFiles/Project_3.dir/flags.make
 CMakeFiles/Project_3.dir/src/dict.cpp.obj: CMakeFiles/Project_3.dir/includes_CXX.rsp
 CMakeFiles/Project_3.dir/src/dict.cpp.obj: ../src/dict.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\asus\Desktop\CurseOnline\DataStructure\Experiments\Project_3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Project_3.dir/src/dict.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\asus\Desktop\CurseOnline\DataStructure\Experiments\Project_3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Project_3.dir/src/dict.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project_3.dir\src\dict.cpp.obj -c C:\Users\asus\Desktop\CurseOnline\DataStructure\Experiments\Project_3\src\dict.cpp
 
 CMakeFiles/Project_3.dir/src/dict.cpp.i: cmake_force
@@ -84,37 +70,35 @@ CMakeFiles/Project_3.dir/src/dict.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_3.dir/src/dict.cpp.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\asus\Desktop\CurseOnline\DataStructure\Experiments\Project_3\src\dict.cpp -o CMakeFiles\Project_3.dir\src\dict.cpp.s
 
-CMakeFiles/Project_3.dir/src/word_check.cpp.obj: CMakeFiles/Project_3.dir/flags.make
-CMakeFiles/Project_3.dir/src/word_check.cpp.obj: CMakeFiles/Project_3.dir/includes_CXX.rsp
-CMakeFiles/Project_3.dir/src/word_check.cpp.obj: ../src/word_check.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\asus\Desktop\CurseOnline\DataStructure\Experiments\Project_3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Project_3.dir/src/word_check.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project_3.dir\src\word_check.cpp.obj -c C:\Users\asus\Desktop\CurseOnline\DataStructure\Experiments\Project_3\src\word_check.cpp
+CMakeFiles/Project_3.dir/src/hashtable.cpp.obj: CMakeFiles/Project_3.dir/flags.make
+CMakeFiles/Project_3.dir/src/hashtable.cpp.obj: CMakeFiles/Project_3.dir/includes_CXX.rsp
+CMakeFiles/Project_3.dir/src/hashtable.cpp.obj: ../src/hashtable.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\asus\Desktop\CurseOnline\DataStructure\Experiments\Project_3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Project_3.dir/src/hashtable.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project_3.dir\src\hashtable.cpp.obj -c C:\Users\asus\Desktop\CurseOnline\DataStructure\Experiments\Project_3\src\hashtable.cpp
 
-CMakeFiles/Project_3.dir/src/word_check.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_3.dir/src/word_check.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\asus\Desktop\CurseOnline\DataStructure\Experiments\Project_3\src\word_check.cpp > CMakeFiles\Project_3.dir\src\word_check.cpp.i
+CMakeFiles/Project_3.dir/src/hashtable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_3.dir/src/hashtable.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\asus\Desktop\CurseOnline\DataStructure\Experiments\Project_3\src\hashtable.cpp > CMakeFiles\Project_3.dir\src\hashtable.cpp.i
 
-CMakeFiles/Project_3.dir/src/word_check.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_3.dir/src/word_check.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\asus\Desktop\CurseOnline\DataStructure\Experiments\Project_3\src\word_check.cpp -o CMakeFiles\Project_3.dir\src\word_check.cpp.s
+CMakeFiles/Project_3.dir/src/hashtable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_3.dir/src/hashtable.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\asus\Desktop\CurseOnline\DataStructure\Experiments\Project_3\src\hashtable.cpp -o CMakeFiles\Project_3.dir\src\hashtable.cpp.s
 
 # Object files for target Project_3
 Project_3_OBJECTS = \
-"CMakeFiles/Project_3.dir/src/hashtable.cpp.obj" \
 "CMakeFiles/Project_3.dir/src/dict.cpp.obj" \
-"CMakeFiles/Project_3.dir/src/word_check.cpp.obj"
+"CMakeFiles/Project_3.dir/src/hashtable.cpp.obj"
 
 # External object files for target Project_3
 Project_3_EXTERNAL_OBJECTS =
 
-Project_3.exe: CMakeFiles/Project_3.dir/src/hashtable.cpp.obj
 Project_3.exe: CMakeFiles/Project_3.dir/src/dict.cpp.obj
-Project_3.exe: CMakeFiles/Project_3.dir/src/word_check.cpp.obj
+Project_3.exe: CMakeFiles/Project_3.dir/src/hashtable.cpp.obj
 Project_3.exe: CMakeFiles/Project_3.dir/build.make
 Project_3.exe: CMakeFiles/Project_3.dir/linklibs.rsp
 Project_3.exe: CMakeFiles/Project_3.dir/objects1.rsp
 Project_3.exe: CMakeFiles/Project_3.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\asus\Desktop\CurseOnline\DataStructure\Experiments\Project_3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Project_3.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\asus\Desktop\CurseOnline\DataStructure\Experiments\Project_3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Project_3.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Project_3.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
