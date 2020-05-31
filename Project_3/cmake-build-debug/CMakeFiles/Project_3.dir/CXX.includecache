@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+../include/dict.h
+iostream
+-
+string
+-
+utility
+-
+hashtable.h
+../include/hashtable.h
+
 ../include/hashtable.h
 iostream
 -
@@ -14,7 +24,7 @@ string
 utility
 -
 
-C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_3/src/part1.cpp
-hashtable.h
-C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_3/src/hashtable.h
+C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_3/src/dict.cpp
+dict.h
+C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_3/src/dict.h
 

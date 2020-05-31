@@ -44,7 +44,7 @@ bool Node::operator==(Node &n) {
 }
 
 char Node::operator[](const int index) {
-    if (p.first.empty() || index >= p.first.size() || index < 0)
+    if (p.first.empty() || (unsigned) index >= p.first.size() || index < 0)
         return '\0';
     return p.first[index];
 }
@@ -69,11 +69,11 @@ Node::~Node() {
 HashTable::HashTable() {
     // set hash table to 200000
     elem = new Node[MAX_SIZE + 2];
-    size = 0;
+    size = MAX_SIZE;
 }
 
 HashTable::~HashTable() {
-    delete elem;
+    delete[] elem;
 }
 
 int HashTable::hash(Node &index) {
@@ -167,6 +167,24 @@ const pair<string, int> *HashTable::get_pair(int index) const {
     return NULL;
 }
 
-const int &HashTable::worddTimes(string &str) const {
-    return <#initializer#>;
+int HashTable::hash(const char *str) {
+    if (!str)
+        return -1;
+    int hash = 0;
+    int i = 0;
+    while (str[i] != '\0') {
+        hash = 31 * hash + str[i];
+        i++;
+    }
+    return abs(hash) % MAX_SIZE;
 }
+
+int HashTable::hash(string &str) {
+    if (str.empty())
+        return -1;
+    int hash = 0;
+    for (char c : str)
+        hash = hash * 31 + c;
+    return abs(hash) % MAX_SIZE;
+}
+

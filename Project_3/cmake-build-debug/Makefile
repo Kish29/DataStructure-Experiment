@@ -122,6 +122,33 @@ Project_3/fast:
 	$(MAKE) -f CMakeFiles\Project_3.dir\build.make CMakeFiles/Project_3.dir/build
 .PHONY : Project_3/fast
 
+src/dict.obj: src/dict.cpp.obj
+
+.PHONY : src/dict.obj
+
+# target to build an object file
+src/dict.cpp.obj:
+	$(MAKE) -f CMakeFiles\Project_3.dir\build.make CMakeFiles/Project_3.dir/src/dict.cpp.obj
+.PHONY : src/dict.cpp.obj
+
+src/dict.i: src/dict.cpp.i
+
+.PHONY : src/dict.i
+
+# target to preprocess a source file
+src/dict.cpp.i:
+	$(MAKE) -f CMakeFiles\Project_3.dir\build.make CMakeFiles/Project_3.dir/src/dict.cpp.i
+.PHONY : src/dict.cpp.i
+
+src/dict.s: src/dict.cpp.s
+
+.PHONY : src/dict.s
+
+# target to generate assembly for a file
+src/dict.cpp.s:
+	$(MAKE) -f CMakeFiles\Project_3.dir\build.make CMakeFiles/Project_3.dir/src/dict.cpp.s
+.PHONY : src/dict.cpp.s
+
 src/hashtable.obj: src/hashtable.cpp.obj
 
 .PHONY : src/hashtable.obj
@@ -149,32 +176,32 @@ src/hashtable.cpp.s:
 	$(MAKE) -f CMakeFiles\Project_3.dir\build.make CMakeFiles/Project_3.dir/src/hashtable.cpp.s
 .PHONY : src/hashtable.cpp.s
 
-src/part1.obj: src/part1.cpp.obj
+src/word_check.obj: src/word_check.cpp.obj
 
-.PHONY : src/part1.obj
+.PHONY : src/word_check.obj
 
 # target to build an object file
-src/part1.cpp.obj:
-	$(MAKE) -f CMakeFiles\Project_3.dir\build.make CMakeFiles/Project_3.dir/src/part1.cpp.obj
-.PHONY : src/part1.cpp.obj
+src/word_check.cpp.obj:
+	$(MAKE) -f CMakeFiles\Project_3.dir\build.make CMakeFiles/Project_3.dir/src/word_check.cpp.obj
+.PHONY : src/word_check.cpp.obj
 
-src/part1.i: src/part1.cpp.i
+src/word_check.i: src/word_check.cpp.i
 
-.PHONY : src/part1.i
+.PHONY : src/word_check.i
 
 # target to preprocess a source file
-src/part1.cpp.i:
-	$(MAKE) -f CMakeFiles\Project_3.dir\build.make CMakeFiles/Project_3.dir/src/part1.cpp.i
-.PHONY : src/part1.cpp.i
+src/word_check.cpp.i:
+	$(MAKE) -f CMakeFiles\Project_3.dir\build.make CMakeFiles/Project_3.dir/src/word_check.cpp.i
+.PHONY : src/word_check.cpp.i
 
-src/part1.s: src/part1.cpp.s
+src/word_check.s: src/word_check.cpp.s
 
-.PHONY : src/part1.s
+.PHONY : src/word_check.s
 
 # target to generate assembly for a file
-src/part1.cpp.s:
-	$(MAKE) -f CMakeFiles\Project_3.dir\build.make CMakeFiles/Project_3.dir/src/part1.cpp.s
-.PHONY : src/part1.cpp.s
+src/word_check.cpp.s:
+	$(MAKE) -f CMakeFiles\Project_3.dir\build.make CMakeFiles/Project_3.dir/src/word_check.cpp.s
+.PHONY : src/word_check.cpp.s
 
 # Help Target
 help:
@@ -185,12 +212,15 @@ help:
 	@echo ... edit_cache
 	@echo ... Project_3
 	@echo ... rebuild_cache
+	@echo ... src/dict.obj
+	@echo ... src/dict.i
+	@echo ... src/dict.s
 	@echo ... src/hashtable.obj
 	@echo ... src/hashtable.i
 	@echo ... src/hashtable.s
-	@echo ... src/part1.obj
-	@echo ... src/part1.i
-	@echo ... src/part1.s
+	@echo ... src/word_check.obj
+	@echo ... src/word_check.i
+	@echo ... src/word_check.s
 .PHONY : help
 
 

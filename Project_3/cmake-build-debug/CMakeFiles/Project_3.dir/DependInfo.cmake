@@ -4,8 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_3/src/dict.cpp" "C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_3/cmake-build-debug/CMakeFiles/Project_3.dir/src/dict.cpp.obj"
   "C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_3/src/hashtable.cpp" "C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_3/cmake-build-debug/CMakeFiles/Project_3.dir/src/hashtable.cpp.obj"
-  "C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_3/src/part1.cpp" "C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_3/cmake-build-debug/CMakeFiles/Project_3.dir/src/part1.cpp.obj"
+  "C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_3/src/word_check.cpp" "C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_3/cmake-build-debug/CMakeFiles/Project_3.dir/src/word_check.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

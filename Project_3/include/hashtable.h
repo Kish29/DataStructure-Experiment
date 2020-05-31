@@ -54,6 +54,10 @@ public:
 
     int hash(Node &index);
 
+    int hash(string &str);
+
+    int hash(const char *str);
+
     bool search(Node &index, int &pos, int &times);
 
     int insert(Node &index);
@@ -65,8 +69,6 @@ public:
     const pair<string, int> *get_pair(int index);
 
     const pair<string, int> *get_pair(int index) const;
-
-    const int &worddTimes(std::string &str) const;
 };
 
 #endif
