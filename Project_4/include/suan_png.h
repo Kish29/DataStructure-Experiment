@@ -7,7 +7,7 @@
 
 class PNG {
 private:
-    pxl * image;
+    pxl *image;
     int width_;
     int height_;
 public:
