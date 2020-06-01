@@ -56,24 +56,10 @@ include CMakeFiles/Project_4.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Project_4.dir/flags.make
 
-CMakeFiles/Project_4.dir/MainTest.cpp.obj: CMakeFiles/Project_4.dir/flags.make
-CMakeFiles/Project_4.dir/MainTest.cpp.obj: CMakeFiles/Project_4.dir/includes_CXX.rsp
-CMakeFiles/Project_4.dir/MainTest.cpp.obj: ../MainTest.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\asus\Desktop\CurseOnline\DataStructure\Experiments\Project_4\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Project_4.dir/MainTest.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project_4.dir\MainTest.cpp.obj -c C:\Users\asus\Desktop\CurseOnline\DataStructure\Experiments\Project_4\MainTest.cpp
-
-CMakeFiles/Project_4.dir/MainTest.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_4.dir/MainTest.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\asus\Desktop\CurseOnline\DataStructure\Experiments\Project_4\MainTest.cpp > CMakeFiles\Project_4.dir\MainTest.cpp.i
-
-CMakeFiles/Project_4.dir/MainTest.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_4.dir/MainTest.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\asus\Desktop\CurseOnline\DataStructure\Experiments\Project_4\MainTest.cpp -o CMakeFiles\Project_4.dir\MainTest.cpp.s
-
 CMakeFiles/Project_4.dir/src/tree.cpp.obj: CMakeFiles/Project_4.dir/flags.make
 CMakeFiles/Project_4.dir/src/tree.cpp.obj: CMakeFiles/Project_4.dir/includes_CXX.rsp
 CMakeFiles/Project_4.dir/src/tree.cpp.obj: ../src/tree.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\asus\Desktop\CurseOnline\DataStructure\Experiments\Project_4\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Project_4.dir/src/tree.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\asus\Desktop\CurseOnline\DataStructure\Experiments\Project_4\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Project_4.dir/src/tree.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project_4.dir\src\tree.cpp.obj -c C:\Users\asus\Desktop\CurseOnline\DataStructure\Experiments\Project_4\src\tree.cpp
 
 CMakeFiles/Project_4.dir/src/tree.cpp.i: cmake_force
@@ -87,7 +73,7 @@ CMakeFiles/Project_4.dir/src/tree.cpp.s: cmake_force
 CMakeFiles/Project_4.dir/src/suan_png.cpp.obj: CMakeFiles/Project_4.dir/flags.make
 CMakeFiles/Project_4.dir/src/suan_png.cpp.obj: CMakeFiles/Project_4.dir/includes_CXX.rsp
 CMakeFiles/Project_4.dir/src/suan_png.cpp.obj: ../src/suan_png.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\asus\Desktop\CurseOnline\DataStructure\Experiments\Project_4\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Project_4.dir/src/suan_png.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\asus\Desktop\CurseOnline\DataStructure\Experiments\Project_4\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Project_4.dir/src/suan_png.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project_4.dir\src\suan_png.cpp.obj -c C:\Users\asus\Desktop\CurseOnline\DataStructure\Experiments\Project_4\src\suan_png.cpp
 
 CMakeFiles/Project_4.dir/src/suan_png.cpp.i: cmake_force
@@ -101,7 +87,7 @@ CMakeFiles/Project_4.dir/src/suan_png.cpp.s: cmake_force
 CMakeFiles/Project_4.dir/src/pxl.cpp.obj: CMakeFiles/Project_4.dir/flags.make
 CMakeFiles/Project_4.dir/src/pxl.cpp.obj: CMakeFiles/Project_4.dir/includes_CXX.rsp
 CMakeFiles/Project_4.dir/src/pxl.cpp.obj: ../src/pxl.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\asus\Desktop\CurseOnline\DataStructure\Experiments\Project_4\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Project_4.dir/src/pxl.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\asus\Desktop\CurseOnline\DataStructure\Experiments\Project_4\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Project_4.dir/src/pxl.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project_4.dir\src\pxl.cpp.obj -c C:\Users\asus\Desktop\CurseOnline\DataStructure\Experiments\Project_4\src\pxl.cpp
 
 CMakeFiles/Project_4.dir/src/pxl.cpp.i: cmake_force
@@ -112,20 +98,34 @@ CMakeFiles/Project_4.dir/src/pxl.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_4.dir/src/pxl.cpp.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\asus\Desktop\CurseOnline\DataStructure\Experiments\Project_4\src\pxl.cpp -o CMakeFiles\Project_4.dir\src\pxl.cpp.s
 
+CMakeFiles/Project_4.dir/src/test.cpp.obj: CMakeFiles/Project_4.dir/flags.make
+CMakeFiles/Project_4.dir/src/test.cpp.obj: CMakeFiles/Project_4.dir/includes_CXX.rsp
+CMakeFiles/Project_4.dir/src/test.cpp.obj: ../src/test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\asus\Desktop\CurseOnline\DataStructure\Experiments\Project_4\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Project_4.dir/src/test.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project_4.dir\src\test.cpp.obj -c C:\Users\asus\Desktop\CurseOnline\DataStructure\Experiments\Project_4\src\test.cpp
+
+CMakeFiles/Project_4.dir/src/test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_4.dir/src/test.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\asus\Desktop\CurseOnline\DataStructure\Experiments\Project_4\src\test.cpp > CMakeFiles\Project_4.dir\src\test.cpp.i
+
+CMakeFiles/Project_4.dir/src/test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_4.dir/src/test.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\asus\Desktop\CurseOnline\DataStructure\Experiments\Project_4\src\test.cpp -o CMakeFiles\Project_4.dir\src\test.cpp.s
+
 # Object files for target Project_4
 Project_4_OBJECTS = \
-"CMakeFiles/Project_4.dir/MainTest.cpp.obj" \
 "CMakeFiles/Project_4.dir/src/tree.cpp.obj" \
 "CMakeFiles/Project_4.dir/src/suan_png.cpp.obj" \
-"CMakeFiles/Project_4.dir/src/pxl.cpp.obj"
+"CMakeFiles/Project_4.dir/src/pxl.cpp.obj" \
+"CMakeFiles/Project_4.dir/src/test.cpp.obj"
 
 # External object files for target Project_4
 Project_4_EXTERNAL_OBJECTS =
 
-Project_4.exe: CMakeFiles/Project_4.dir/MainTest.cpp.obj
 Project_4.exe: CMakeFiles/Project_4.dir/src/tree.cpp.obj
 Project_4.exe: CMakeFiles/Project_4.dir/src/suan_png.cpp.obj
 Project_4.exe: CMakeFiles/Project_4.dir/src/pxl.cpp.obj
+Project_4.exe: CMakeFiles/Project_4.dir/src/test.cpp.obj
 Project_4.exe: CMakeFiles/Project_4.dir/build.make
 Project_4.exe: CMakeFiles/Project_4.dir/linklibs.rsp
 Project_4.exe: CMakeFiles/Project_4.dir/objects1.rsp

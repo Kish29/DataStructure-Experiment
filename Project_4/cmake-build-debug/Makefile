@@ -122,33 +122,6 @@ Project_4/fast:
 	$(MAKE) -f CMakeFiles\Project_4.dir\build.make CMakeFiles/Project_4.dir/build
 .PHONY : Project_4/fast
 
-MainTest.obj: MainTest.cpp.obj
-
-.PHONY : MainTest.obj
-
-# target to build an object file
-MainTest.cpp.obj:
-	$(MAKE) -f CMakeFiles\Project_4.dir\build.make CMakeFiles/Project_4.dir/MainTest.cpp.obj
-.PHONY : MainTest.cpp.obj
-
-MainTest.i: MainTest.cpp.i
-
-.PHONY : MainTest.i
-
-# target to preprocess a source file
-MainTest.cpp.i:
-	$(MAKE) -f CMakeFiles\Project_4.dir\build.make CMakeFiles/Project_4.dir/MainTest.cpp.i
-.PHONY : MainTest.cpp.i
-
-MainTest.s: MainTest.cpp.s
-
-.PHONY : MainTest.s
-
-# target to generate assembly for a file
-MainTest.cpp.s:
-	$(MAKE) -f CMakeFiles\Project_4.dir\build.make CMakeFiles/Project_4.dir/MainTest.cpp.s
-.PHONY : MainTest.cpp.s
-
 src/pxl.obj: src/pxl.cpp.obj
 
 .PHONY : src/pxl.obj
@@ -203,6 +176,33 @@ src/suan_png.cpp.s:
 	$(MAKE) -f CMakeFiles\Project_4.dir\build.make CMakeFiles/Project_4.dir/src/suan_png.cpp.s
 .PHONY : src/suan_png.cpp.s
 
+src/test.obj: src/test.cpp.obj
+
+.PHONY : src/test.obj
+
+# target to build an object file
+src/test.cpp.obj:
+	$(MAKE) -f CMakeFiles\Project_4.dir\build.make CMakeFiles/Project_4.dir/src/test.cpp.obj
+.PHONY : src/test.cpp.obj
+
+src/test.i: src/test.cpp.i
+
+.PHONY : src/test.i
+
+# target to preprocess a source file
+src/test.cpp.i:
+	$(MAKE) -f CMakeFiles\Project_4.dir\build.make CMakeFiles/Project_4.dir/src/test.cpp.i
+.PHONY : src/test.cpp.i
+
+src/test.s: src/test.cpp.s
+
+.PHONY : src/test.s
+
+# target to generate assembly for a file
+src/test.cpp.s:
+	$(MAKE) -f CMakeFiles\Project_4.dir\build.make CMakeFiles/Project_4.dir/src/test.cpp.s
+.PHONY : src/test.cpp.s
+
 src/tree.obj: src/tree.cpp.obj
 
 .PHONY : src/tree.obj
@@ -239,15 +239,15 @@ help:
 	@echo ... rebuild_cache
 	@echo ... Project_4
 	@echo ... edit_cache
-	@echo ... MainTest.obj
-	@echo ... MainTest.i
-	@echo ... MainTest.s
 	@echo ... src/pxl.obj
 	@echo ... src/pxl.i
 	@echo ... src/pxl.s
 	@echo ... src/suan_png.obj
 	@echo ... src/suan_png.i
 	@echo ... src/suan_png.s
+	@echo ... src/test.obj
+	@echo ... src/test.i
+	@echo ... src/test.s
 	@echo ... src/tree.obj
 	@echo ... src/tree.i
 	@echo ... src/tree.s

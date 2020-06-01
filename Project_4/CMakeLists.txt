@@ -7,4 +7,4 @@ set(INC_DIR include)
 
 include_directories(${INC_DIR})
 
-add_executable(Project_4 MainTest.cpp src/tree.cpp src/suan_png.cpp src/pxl.cpp)
+add_executable(Project_4 src/tree.cpp src/suan_png.cpp src/pxl.cpp src/test.cpp)
