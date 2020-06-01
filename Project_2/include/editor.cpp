@@ -24,7 +24,7 @@ int resume() {
         return -1;
     else {
         history->push(tmp->pop());
-        history->print();
+        //history->print();
         return 0;
     }
 }
