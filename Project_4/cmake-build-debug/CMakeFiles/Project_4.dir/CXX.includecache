@@ -6,11 +6,41 @@
 
 #IncludeRegexTransform: 
 
+../include/pxl.h
+cstdint
+-
+
+../include/suan_png.h
+string
+-
+png.h
+-
+pxl.h
+../include/pxl.h
+
+../include/tree.h
+cstdint
+-
+cmath
+-
+utility
+-
+iostream
+-
+stdio.h
+-
+pxl.h
+../include/pxl.h
+suan_png.h
+../include/suan_png.h
+
 C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_4/MainTest.cpp
 iostream
 C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_4/iostream
-string.h
-C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_4/string.h
-stdio.h
-C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_4/stdio.h
+tree.h
+C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_4/tree.h
+
+C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_4/src/tree.cpp
+tree.h
+C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_4/src/tree.h
 

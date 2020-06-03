@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Project_4.dir/src/pxl.cpp.obj"
-  "CMakeFiles/Project_4.dir/src/suan_png.cpp.obj"
   "CMakeFiles/Project_4.dir/src/test.cpp.obj"
   "CMakeFiles/Project_4.dir/src/tree.cpp.obj"
   "Project_4.exe"

@@ -149,33 +149,6 @@ src/pxl.cpp.s:
 	$(MAKE) -f CMakeFiles\Project_4.dir\build.make CMakeFiles/Project_4.dir/src/pxl.cpp.s
 .PHONY : src/pxl.cpp.s
 
-src/suan_png.obj: src/suan_png.cpp.obj
-
-.PHONY : src/suan_png.obj
-
-# target to build an object file
-src/suan_png.cpp.obj:
-	$(MAKE) -f CMakeFiles\Project_4.dir\build.make CMakeFiles/Project_4.dir/src/suan_png.cpp.obj
-.PHONY : src/suan_png.cpp.obj
-
-src/suan_png.i: src/suan_png.cpp.i
-
-.PHONY : src/suan_png.i
-
-# target to preprocess a source file
-src/suan_png.cpp.i:
-	$(MAKE) -f CMakeFiles\Project_4.dir\build.make CMakeFiles/Project_4.dir/src/suan_png.cpp.i
-.PHONY : src/suan_png.cpp.i
-
-src/suan_png.s: src/suan_png.cpp.s
-
-.PHONY : src/suan_png.s
-
-# target to generate assembly for a file
-src/suan_png.cpp.s:
-	$(MAKE) -f CMakeFiles\Project_4.dir\build.make CMakeFiles/Project_4.dir/src/suan_png.cpp.s
-.PHONY : src/suan_png.cpp.s
-
 src/test.obj: src/test.cpp.obj
 
 .PHONY : src/test.obj
@@ -242,9 +215,6 @@ help:
 	@echo ... src/pxl.obj
 	@echo ... src/pxl.i
 	@echo ... src/pxl.s
-	@echo ... src/suan_png.obj
-	@echo ... src/suan_png.i
-	@echo ... src/suan_png.s
 	@echo ... src/test.obj
 	@echo ... src/test.i
 	@echo ... src/test.s

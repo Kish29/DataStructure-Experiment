@@ -5,7 +5,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_4/src/pxl.cpp" "C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_4/cmake-build-debug/CMakeFiles/Project_4.dir/src/pxl.cpp.obj"
-  "C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_4/src/suan_png.cpp" "C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_4/cmake-build-debug/CMakeFiles/Project_4.dir/src/suan_png.cpp.obj"
   "C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_4/src/test.cpp" "C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_4/cmake-build-debug/CMakeFiles/Project_4.dir/src/test.cpp.obj"
   "C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_4/src/tree.cpp" "C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_4/cmake-build-debug/CMakeFiles/Project_4.dir/src/tree.cpp.obj"
   )
