@@ -4,6 +4,10 @@
 #include <stdlib.h>
 #include <string.h>
 
+bool is_alpha(char c) {
+    return ('0' <= c && c <= '9') || ('A' <= c && c <= 'Z') || ('a' <= c && c <= 'z');
+}
+
 int read_from_file(FILE *input_file, Dict *d);
 
 int main(int argc, char *argv[]) {
@@ -24,14 +28,22 @@ int main(int argc, char *argv[]) {
 
 int read_from_file(FILE *input_file, Dict *d) {
     // get file size
-    int size = 10000;
-    char *str = (char *) malloc(sizeof(char) * size);
-    while (fgets(str, size, input_file) != nullptr) {
-        if (ferror(input_file)) {
-            //free(str);
-            return -1;
+    if (input_file && d) {
+        string str = "";
+        char c = '\0';
+        bool tag = false;
+        while (((c = fgetc(input_file)) != EOF)) {
+            if (is_alpha(c)) {
+                str += c;
+                tag = true;
+            } else {
+                if (tag) {
+                    d->insert(str.c_str());
+                    tag = false;
+                    str = "";
+                }
+            }
         }
-        d->insert(str);
     }
     return 0;
 }

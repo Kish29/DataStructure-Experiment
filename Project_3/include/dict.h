@@ -14,7 +14,7 @@ private:
 public:
     Dict();
 
-    int insert(char *str);
+    int insert(const char *str);
 
     void print() const;
 

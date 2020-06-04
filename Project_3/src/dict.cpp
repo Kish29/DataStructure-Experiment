@@ -1,9 +1,12 @@
 #include "dict.h"
 
-int Dict::insert(char *str) {
+int Dict::insert(const char *str) {
     if (!str)
         return 1;
-    string cstr = convertToString(str);
+    //string cstr = convertToString(str);
+    string cstr = str;
+    if (!isAlpha(cstr))
+        return 1;
     toLowerCase(cstr);
     int len = cstr.size();
     int first_of;
