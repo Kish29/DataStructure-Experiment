@@ -45,7 +45,7 @@ Player_info *get_info() {
 int main() {
     Heap *h = new Heap();
     printf("Please Enter Following Info: [Username] [uid] [score]\n");
-    for (int i = 0; i < 200000; i++) {
+    for (int i = 0; i < 2000; i++) {
         Player_info *p = get_info();
         h->insert(*p);
         delete p;

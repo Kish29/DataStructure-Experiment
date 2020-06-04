@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Project_5.dir/src/heap.cpp.obj"
   "CMakeFiles/Project_5.dir/src/part1.cpp.obj"
   "Project_5.exe"
   "Project_5.exe.manifest"

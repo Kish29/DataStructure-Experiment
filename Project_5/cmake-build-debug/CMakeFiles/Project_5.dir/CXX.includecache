@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/heap.h
+string
+-
+stdio.h
+-
+
+C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_5/src/part1.cpp
+heap.h
+C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_5/src/heap.h
+iostream
+C:/Users/asus/Desktop/CurseOnline/DataStructure/Experiments/Project_5/src/iostream
+

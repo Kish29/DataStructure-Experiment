@@ -8,4 +8,4 @@ set(INC_DIR include)
 
 include_directories(${INC_DIR})
 
-add_executable(Project_5 src/part1.cpp)
+add_executable(Project_5 src/part1.cpp src/heap.cpp)

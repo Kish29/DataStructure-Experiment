@@ -122,6 +122,33 @@ Project_5/fast:
 	$(MAKE) -f CMakeFiles\Project_5.dir\build.make CMakeFiles/Project_5.dir/build
 .PHONY : Project_5/fast
 
+src/heap.obj: src/heap.cpp.obj
+
+.PHONY : src/heap.obj
+
+# target to build an object file
+src/heap.cpp.obj:
+	$(MAKE) -f CMakeFiles\Project_5.dir\build.make CMakeFiles/Project_5.dir/src/heap.cpp.obj
+.PHONY : src/heap.cpp.obj
+
+src/heap.i: src/heap.cpp.i
+
+.PHONY : src/heap.i
+
+# target to preprocess a source file
+src/heap.cpp.i:
+	$(MAKE) -f CMakeFiles\Project_5.dir\build.make CMakeFiles/Project_5.dir/src/heap.cpp.i
+.PHONY : src/heap.cpp.i
+
+src/heap.s: src/heap.cpp.s
+
+.PHONY : src/heap.s
+
+# target to generate assembly for a file
+src/heap.cpp.s:
+	$(MAKE) -f CMakeFiles\Project_5.dir\build.make CMakeFiles/Project_5.dir/src/heap.cpp.s
+.PHONY : src/heap.cpp.s
+
 src/part1.obj: src/part1.cpp.obj
 
 .PHONY : src/part1.obj
@@ -158,6 +185,9 @@ help:
 	@echo ... Project_5
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... src/heap.obj
+	@echo ... src/heap.i
+	@echo ... src/heap.s
 	@echo ... src/part1.obj
 	@echo ... src/part1.i
 	@echo ... src/part1.s
