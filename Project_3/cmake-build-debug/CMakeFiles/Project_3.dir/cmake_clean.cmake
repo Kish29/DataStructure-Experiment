@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Project_3.dir/src/dict.cpp.obj"
   "CMakeFiles/Project_3.dir/src/hashtable.cpp.obj"
+  "CMakeFiles/Project_3.dir/src/word_check.cpp.obj"
   "Project_3.exe"
   "Project_3.exe.manifest"
   "Project_3.pdb"

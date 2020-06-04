@@ -1,46 +1,43 @@
 #include "hashtable.h"
+#include "string.h"
 
 bool Node::operator!=(const char *str) {
     if (!str)
         return true;
     else {
         int pStrLen = p.first.size();
-        for (int i = 0; i < pStrLen; ++i) {
-            if (str[i] != p.first[i])
-                break;
-            if (i == pStrLen - 1 && str[i + 1] == '\0')
-                return false;
-            else if (str[i + 1] == '\0' && i != pStrLen - 1)
-                break;
-            else if (str[i + 1] != '\0' && i == pStrLen - 1)
-                break;
+        // 获取str的长度
+        int strLen = strlen(str);
+        if (strLen != pStrLen)
+            return true;
+        else {
+            for (int i = 0; i < pStrLen; ++i) {
+                if (str[i] != p.first[i])
+                    return true;
+            }
+            return false;
         }
     }
-    return true;
 }
 
 bool Node::operator!=(const string &str) {
-    if (str.empty())
-        return true;
     return p.first != str;
 }
 
 bool Node::operator==(const char *str) {
-    return !(p.first != str);
+    return p.first == str;
 }
 
 bool Node::operator==(const string &str) {
-    return !(p.first != str);
+    return p.first == str;
 }
 
 bool Node::operator!=(Node &n) {
-    if (n.p.first.empty())
-        return true;
     return p.first != n.p.first;
 }
 
 bool Node::operator==(Node &n) {
-    return !(*this != n);
+    return p.first == n.p.first;
 }
 
 char Node::operator[](const int index) {
@@ -68,7 +65,7 @@ Node::~Node() {
 
 HashTable::HashTable() {
     // set hash table to 200000
-    elem = new Node[MAX_SIZE + 2];
+    elem = new Node[MAX_SIZE];
     size = MAX_SIZE;
 }
 
@@ -86,18 +83,17 @@ int HashTable::hash(Node &index) {
 }
 
 bool HashTable::search(Node &index, int &pos, int &times) {
-    int hash = this->hash(index);
+    pos = this->hash(index);
     // collision times
     times = 0;
-    int i = times % MAX_SIZE;
-    // record index
-    pos = hash + i;
-    while (elem[hash + i] != index) {
-        if (elem[hash + i] == "#")
+    while (elem[pos] != index) {
+        if (elem[pos] == "#")
             return false;
         times++;
-        i = times % MAX_SIZE;
-        pos += i;
+        if (times >= MAX_SIZE)
+            return true;
+        pos++;
+        pos = pos % MAX_SIZE;
     }
     return true;
 }

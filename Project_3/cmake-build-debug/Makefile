@@ -176,6 +176,33 @@ src/hashtable.cpp.s:
 	$(MAKE) -f CMakeFiles\Project_3.dir\build.make CMakeFiles/Project_3.dir/src/hashtable.cpp.s
 .PHONY : src/hashtable.cpp.s
 
+src/word_check.obj: src/word_check.cpp.obj
+
+.PHONY : src/word_check.obj
+
+# target to build an object file
+src/word_check.cpp.obj:
+	$(MAKE) -f CMakeFiles\Project_3.dir\build.make CMakeFiles/Project_3.dir/src/word_check.cpp.obj
+.PHONY : src/word_check.cpp.obj
+
+src/word_check.i: src/word_check.cpp.i
+
+.PHONY : src/word_check.i
+
+# target to preprocess a source file
+src/word_check.cpp.i:
+	$(MAKE) -f CMakeFiles\Project_3.dir\build.make CMakeFiles/Project_3.dir/src/word_check.cpp.i
+.PHONY : src/word_check.cpp.i
+
+src/word_check.s: src/word_check.cpp.s
+
+.PHONY : src/word_check.s
+
+# target to generate assembly for a file
+src/word_check.cpp.s:
+	$(MAKE) -f CMakeFiles\Project_3.dir\build.make CMakeFiles/Project_3.dir/src/word_check.cpp.s
+.PHONY : src/word_check.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -191,6 +218,9 @@ help:
 	@echo ... src/hashtable.obj
 	@echo ... src/hashtable.i
 	@echo ... src/hashtable.s
+	@echo ... src/word_check.obj
+	@echo ... src/word_check.i
+	@echo ... src/word_check.s
 .PHONY : help
 
 

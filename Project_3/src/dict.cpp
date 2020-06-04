@@ -80,8 +80,12 @@ string Dict::convertToString(char *str) {
         int i = 0;
         while (str[i] != '\0') {
             // filter special chars, and convert them to space
-            if (str[i] < 48 || str[i] > 122 || (91 <= str[i] && str[i] <= 96) || (58 <= str[i] && str[i] <= 64))
-                str[i] = ' ';
+            if (str[i] < 48 || str[i] > 122 || (91 <= str[i] && str[i] <= 96) || (58 <= str[i] && str[i] <= 64)) {
+                if (str[i] == '-')
+                    str[i] = '\0';
+                else
+                    str[i] = ' ';
+            }
             cstr += str[i];
             i++;
         }

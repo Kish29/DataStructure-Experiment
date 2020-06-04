@@ -7,4 +7,4 @@ set(INC_DIR include)
 
 include_directories(${INC_DIR})
 
-add_executable(Project_3 src/dict.cpp src/hashtable.cpp)
+add_executable(Project_3 src/dict.cpp src/hashtable.cpp src/word_check.cpp)
