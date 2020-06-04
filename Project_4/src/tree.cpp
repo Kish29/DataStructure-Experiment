@@ -320,9 +320,10 @@ void Node::judging(Node *node, int R, int G, int B) {
     if (!node)
         return;
     else if (node->leaf) { // 叶子节点开始剪枝
-        node->mean_r = R;
-        node->mean_g = G;
-        node->mean_b = B;
+        // 这里一定不要对node的mean_rgb进行清除，不然judge image test过不了
+        //node->mean_r = R;
+        //node->mean_g = G;
+        //node->mean_b = B;
         node->judgeNum++;
 		node->get_pxl()->red = R;
 		node->get_pxl()->green = G;
