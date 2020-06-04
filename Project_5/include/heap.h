@@ -38,8 +38,6 @@ public:
 
     bool operator>=(Player_info &other) const;
 
-    int get_uid()const ;
-
     void print();
 };
 

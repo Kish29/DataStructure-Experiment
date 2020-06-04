@@ -112,20 +112,7 @@ Player_info *Heap::sort() {
     // 用一个副本来排序，不删除原来的堆元素
     auto *temp = new Heap(*this);
     for (int j = num - 1; j >= 0; j--) {
-        // if (j == 0)
         sorted_array[j] = *temp->remove_min_elem();
-        // else {
-        //     auto *temp2 = temp->remove_min_elem();
-        //     if (*temp2 == sorted_array[j - 1]) {
-        //         if (temp2->get_uid() < sorted_array[j - 1].get_uid()) {   // 如果待插入的uid比上一个的小
-        //             auto temp3 = sorted_array[j - 1];
-        //             sorted_array[j - 1] = *temp2;
-        //             sorted_array[j] = sorted_array[j - 1];
-        //         } else
-        //             sorted_array[j] = *temp2;
-        //     } else
-        //         sorted_array[j] = *temp2;
-        // }
     }
     return sorted_array;
 }
@@ -217,8 +204,4 @@ bool Player_info::operator>=(Player_info &other) const {
 
 void Player_info::print() {
     printf("[%ld]%s - %d\n", uid, username.c_str(), score);
-}
-
-int Player_info::get_uid() const {
-    return uid;
 }
