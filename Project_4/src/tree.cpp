@@ -18,7 +18,7 @@ Node::Node(PNG *corner, int input_width, int input_height, int x, int y) {
     height = input_height;
     this->x = x;
     this->y = y;
-	mean_r = mean_g = mean_b = 0;
+    mean_r = mean_g = mean_b = 0;
     judgeNum = 0;
 }
 
@@ -100,7 +100,7 @@ Node &Node::operator=(Node &other) {
     mean_g = other.mean_g;
     mean_b = other.mean_b;
     judgeNum = other.judgeNum;
-	return *this;
+    return *this;
 }
 
 Node &Node::operator=(Node &&other) {
@@ -128,7 +128,7 @@ Node &Node::operator=(Node &&other) {
     mean_g = other.mean_g;
     mean_b = other.mean_b;
     judgeNum = other.judgeNum;
-	return *this;
+    return *this;
 }
 
 void Tree::judge(int threshold) {
@@ -180,7 +180,7 @@ pxl *Node::get_pxl() {
 
 Node *Node::create_tree(PNG *p, int width, int height, int x, int y) {
     // 传递5个参数，p是恒定的照片，with和height表示当前要处理的照片区块宽高，x和y存储相应的的像素点
-    // 存储方式，均以顺时针方向，坐标记为x,y，高宽记为h,w，父节点在后面加一个p字母，孩子1的xy，hw记为x1、y1、h1、w1
+    // 存储方式，左上->右上->左下->右下，坐标记为x,y，高宽记为h,w，父节点在后面加一个p字母，孩子1的xy，hw记为x1、y1、h1、w1
     /*               ====坐标规律=======       ========高宽规律=========
      * children[0]: (xp, yp);                 (hp/2， wp/2)
      * children[1]: (xp + w1, yp)             (hp/2, wp - w1)
@@ -189,9 +189,9 @@ Node *Node::create_tree(PNG *p, int width, int height, int x, int y) {
      * */
     if (width == 1 && height == 1) {//说明是叶子节点
         Node *leaf_node = new Node(p, width, height, x, y);
-		leaf_node->mean_r = p->get_pxl(x, y)->red;
-		leaf_node->mean_g = p->get_pxl(x, y)->green;
-		leaf_node->mean_b = p->get_pxl(x, y)->blue;
+        leaf_node->mean_r = p->get_pxl(x, y)->red;
+        leaf_node->mean_g = p->get_pxl(x, y)->green;
+        leaf_node->mean_b = p->get_pxl(x, y)->blue;
         return leaf_node;
     } else if (width == 1 && height > 1) {
         Node *parent_node = new Node(p, width, height, x, y);
@@ -274,44 +274,45 @@ void Tree::print() {
 }
 
 bool Node::is_repeat(Node *node) const {
-    // 因为要用到&操作，所以要判断一个空指针，返回true
+    // 因为要用到或||操作，所以要判断一个空指针，返回false;
     if (!node)
         return false;
     if (node->leaf) // 如果是叶子节点
         return node->judgeNum > 2;
     else    // 有一个剪枝两次以上就行	
-		return is_repeat(node->children[0]) || is_repeat(node->children[1])|| is_repeat(node->children[2]) || is_repeat(node->children[3]);
+        return is_repeat(node->children[0]) || is_repeat(node->children[1]) || is_repeat(node->children[2]) ||
+               is_repeat(node->children[3]);
 }
 
 void Node::judge_for_leaf(Node *node, int threshold) {
     if (!node)  // 空指针return
         return;
     else {
-		long long var = 0;
+        long long var = 0;
         // 孩子个数
         int n = 0;
         for (int i = 0; i < 4; ++i) {
-			if (node->children[i]) {
-				if (!node->children[i]->leaf) // 如果不是叶子节点，继续向下剪枝
-					judge_for_leaf(node->children[i], threshold);
-				 // 如果是叶子节点，开始计算阈值
-				int red_value = (node->children[i]->mean_r - node->mean_r);
-				int green_value = (node->children[i]->mean_g - node->mean_g);
-				int blue_value = (node->children[i]->mean_b - node->mean_b);
-				var += (red_value * red_value + green_value * green_value + blue_value * blue_value);
-				n++;
-			}
-		}
+            if (node->children[i]) {
+                if (!node->children[i]->leaf) // 如果不是叶子节点，继续向下剪枝
+                    judge_for_leaf(node->children[i], threshold);
+                // 如果是叶子节点，开始计算阈值
+                int red_value = (node->children[i]->mean_r - node->mean_r);
+                int green_value = (node->children[i]->mean_g - node->mean_g);
+                int blue_value = (node->children[i]->mean_b - node->mean_b);
+                var += (red_value * red_value + green_value * green_value + blue_value * blue_value);
+                n++;
+            }
+        }
         var /= (30 * n);    // 得到阈值
         if (var < threshold) { // 小于阈值进行剪枝
-			if (!is_repeat(node)) { // 注意这里查找剪枝次数是从当前的节点开始判断，而不是每个子节点
-			                        // 就是因为这个东西我调试了4个小时，用GDB调得我快吐了
-				for (int i = 0; i < 4; ++i) {
-					if (node->children[i])  // 如果没有重复并且不是空指针
-						judging(node->children[i], node->mean_r, node->mean_g, node->mean_b);
-				}
-			}
-		}
+            if (!is_repeat(node)) { // 注意这里查找剪枝次数是从当前的节点开始判断，而不是每个子节点
+                // 就是因为这个东西我调试了4个小时，用GDB调得我快吐了
+                for (int i = 0; i < 4; ++i) {
+                    if (node->children[i])  // 如果没有重复并且不是空指针
+                        judging(node->children[i], node->mean_r, node->mean_g, node->mean_b);
+                }
+            }
+        }
         return;
     }
 }
@@ -325,9 +326,9 @@ void Node::judging(Node *node, int R, int G, int B) {
         //node->mean_g = G;
         //node->mean_b = B;
         node->judgeNum++;
-		node->get_pxl()->red = R;
-		node->get_pxl()->green = G;
-		node->get_pxl()->blue= B;
+        node->get_pxl()->red = R;
+        node->get_pxl()->green = G;
+        node->get_pxl()->blue = B;
     } else {
         for (int i = 0; i < 4; ++i) {
             judging(node->children[i], R, G, B);

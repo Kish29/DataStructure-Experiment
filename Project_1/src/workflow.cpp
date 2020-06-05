@@ -7,13 +7,8 @@
 Job::~Job() {
     if (worker)
         delete worker;
-    //ע�⣬ǧ��Ҫ��prev��next���в�������Ȼ��δ���
-    // if (prev)
-    //     delete prev;
-    // if (next)
-    //     delete next;
-    //worker = nullptr;
-    //prev = next = nullptr;   // set null
+    // 注意，这里只能释放worker指针，pre和next不能进行释放，因为在workflow的析构函数里已经释放掉了
+    // 不然会段错误
 }
 
 Workflow::Workflow() {
@@ -36,9 +31,6 @@ int Workflow::insert(Job *j) {
     if (j == nullptr)
         return 1;
     if (head == nullptr) {  // if head is null
-        // 注意, 这里只能用calloc分配内存,不然job的id会+1
-        //head = (Job *) calloc(sizeof(Job), 1);
-        //tail = (Job *) calloc(sizeof(Job), 1);
         head = tail = j;
         tail->prev = tail->next = head->prev = nullptr;
         size++;
