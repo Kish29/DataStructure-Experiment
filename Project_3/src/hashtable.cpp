@@ -3,21 +3,9 @@
 
 bool Node::operator!=(const char *str) {
     if (!str)
-        return true;
-    else {
-        int pStrLen = p.first.size();
-        // 获取str的长度
-        int strLen = strlen(str);
-        if (strLen != pStrLen)
-            return true;
-        else {
-            for (int i = 0; i < pStrLen; ++i) {
-                if (str[i] != p.first[i])
-                    return true;
-            }
-            return false;
-        }
-    }
+        return false;
+    else
+        return this->p.first != str;
 }
 
 bool Node::operator!=(const string &str) {
@@ -42,12 +30,14 @@ bool Node::operator==(Node &n) {
 
 char Node::operator[](const int index) {
     if (p.first.empty() || (unsigned) index >= p.first.size() || index < 0)
-        return '\0';
+        return '#';
     return p.first[index];
 }
 
 int Node::length() { //return length of the string
-    return p.first.size();
+    if (p.first.empty())
+        return 0;
+    return p.first.length();
 }
 
 int &Node::second() {
@@ -77,9 +67,9 @@ int HashTable::hash(Node &index) {
     // according to java's hash algorithm
     int hash = 0;
     for (char c : index.getString()) {
-        hash = 31 * hash + c;
+        hash = (hash * 256 + c + 128) % MAX_SIZE;
     }
-    return abs(hash) % MAX_SIZE;
+    return hash % MAX_SIZE;
 }
 
 bool HashTable::search(Node &index, int &pos, int &times) {
@@ -91,7 +81,7 @@ bool HashTable::search(Node &index, int &pos, int &times) {
             return false;
         times++;
         if (times >= MAX_SIZE)
-            return true;
+            return false;
         pos++;
         pos = pos % MAX_SIZE;
     }

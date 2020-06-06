@@ -18,14 +18,10 @@ public:
 
     void print() const;
 
-    static string convertToString(char *str);
-
     // this function must filter illegal words
     static bool isAlpha(string &word);
 
     static void toLowerCase(string &word);
-
-    static void stringTrim(string &word);
 };
 
 #endif

@@ -44,7 +44,7 @@ public:
 
 class HashTable {
 private:
-    const int MAX_SIZE = 200000;
+    const int MAX_SIZE = 100000;
     Node *elem;
     int size;
 public:

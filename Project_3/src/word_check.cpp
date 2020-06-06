@@ -4,8 +4,10 @@
 #include <stdlib.h>
 #include <string.h>
 
+
+// 计蒜客非常煞笔，他认为像 shit40这种去掉数字也算作一个单词
 bool is_alpha(char c) {
-    return ('0' <= c && c <= '9') || ('A' <= c && c <= 'Z') || ('a' <= c && c <= 'z');
+    return ('A' <= c && c <= 'Z') || ('a' <= c && c <= 'z');
 }
 
 int read_from_file(FILE *input_file, Dict *d);
@@ -27,10 +29,9 @@ int main(int argc, char *argv[]) {
 }
 
 int read_from_file(FILE *input_file, Dict *d) {
-    // get file size
     if (input_file && d) {
         string str = "";
-        char c = '\0';
+        char c;
         bool tag = false;
         while (((c = fgetc(input_file)) != EOF)) {
             if (is_alpha(c)) {
