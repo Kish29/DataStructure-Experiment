@@ -25,7 +25,6 @@ Node::Node(PNG *corner, int input_width, int input_height, int x, int y) {
 // 以下是4个相似并且我觉得非常冗余的代码，不过暂时没有想到好的优化方案，如果有，希望告知，万分感谢！！！
 Node::Node(Node &other) {
     p = other.p;
-    children = new Node *[4];
     if (other.children) {
         children = new Node *[4];
         for (int i = 0; i < 4; ++i) {
